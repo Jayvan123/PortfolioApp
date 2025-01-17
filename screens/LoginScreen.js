@@ -13,7 +13,7 @@ const LoginScreen = ({navigation}) => {
   }
 
   return (
-    <View style={styles.whiteBg}>
+    <View style={styles.background}>
 
       {/* app Logo */}
       <View style={styles.appLogo}>
@@ -52,9 +52,9 @@ const LoginScreen = ({navigation}) => {
 export default LoginScreen;
 
 const styles = StyleSheet.create({
-  whiteBg: {
+  background: {
     flex: 1,
-    backgroundColor: '#242b33',
+    backgroundColor: '#000',
     alignItems: 'center',
     paddingHorizontal: 20,
   },
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     borderColor: '#ddd',
     marginHorizontal: 10,
     marginBottom: 15,
-    backgroundColor: '#303546',
+    backgroundColor: '#000',
   },
   label: {
     fontSize: 16,
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     padding: 10,
     marginBottom: 15,
     fontSize: 16,
-    backgroundColor: '#303546',
+    backgroundColor: '#000',
     color: '#fff',
   },
   signinButton: {
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     borderColor: '#ddd',
     marginHorizontal: 10,
     marginBottom: 15,
-    backgroundColor: '#303546',
+    backgroundColor: '#000',
     flexDirection: 'row', 
     justifyContent: 'center', 
     alignItems: 'center',

@@ -34,12 +34,12 @@ const FooterNavigation = () => {
 
           return <Icon name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: '#143b2e', // Active icon color
-        tabBarInactiveTintColor: 'gray', // Inactive icon color
+        tabBarActiveTintColor: '#5339f4', // Active icon color
+        tabBarInactiveTintColor: '#a6a6a6', // Inactive icon color
         tabBarStyle: {
           paddingBottom: 10,
           height: 60,
-          backgroundColor: '#fff', // Background color of the tab bar
+          backgroundColor: '#000', // Background color of the tab bar
           borderTopWidth: 0.5, // Top border for separation
           borderTopColor: '#ddd', // Color for the top border
         },
