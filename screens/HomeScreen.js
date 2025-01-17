@@ -1,5 +1,6 @@
 import { StyleSheet, Text, Image, View, ScrollView, TouchableOpacity, TextInput } from 'react-native';
 import React from 'react';
+import Icon from 'react-native-vector-icons/Ionicons'; // Added the Ionicons import
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -48,32 +49,31 @@ const HomeScreen = ({ navigation }) => {
         </View>
       </View>
 
-      {/* Other Information Section */}
-      <View style={styles.otherInformation}>
-        <Text style={styles.otherInfoTitle}>Other Information</Text>
+      {/* About Me Section */}
+      <View style={styles.aboutMeInformation}>
+        <Text style={styles.otherInfoTitle}>About me</Text>
         <View>
           <View style={styles.otherContainer}>
-            <Text style={styles.labelHeaderTitle}>Title Info 1</Text>
-            <Text style={styles.labelTextDescription}>Description for Title Info 1</Text>
+            {/* Using an Ionicons icon for the school */}
+            <Icon name="school" size={30} color="#fff" style={styles.schoolIcon}/>
+            <Text style={styles.labelTextDescription}>Studies Bachelor of Science and Information Technologo at USTP-CDO</Text>
           </View>
 
           <View style={styles.otherContainer}>
-            <Text style={styles.labelHeaderTitle}>Title Info 2</Text>
-            <Text style={styles.labelTextDescription}>Description for Title Info 2</Text>
+            {/* Using an Ionicons icon for house */}
+            <Icon name="home" size={30} color="#fff" style={styles.houseIcon}/>
+            <Text style={styles.labelTextDescription}>Lives in Zone-12 Hilltop, Upper Carmen CDO</Text>
           </View>
 
           <View style={styles.otherContainer}>
-            <Text style={styles.labelHeaderTitle}>Title Info 3</Text>
-            <Text style={styles.labelTextDescription}>Description for Title Info 3</Text>
+            {/* Using an Ionicons icon for birthday */}
+            <Icon name="gift" size={30} color="#fff" style={styles.birthdayIcon}/>
+            <Text style={styles.labelTextDescription}>November 21, 2003</Text>
           </View>
           
-          <View style={styles.otherContainer}>
-            <Text style={styles.labelHeaderTitle}>Title Info 3</Text>
-            <Text style={styles.labelTextDescription}>Description for Title Info 3</Text>
-          </View>
-
         </View>
       </View>
+
     </ScrollView>
   );
 };
@@ -92,13 +92,13 @@ const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 5,   // Adjusted padding for a cleaner look
+    padding: 5,
     borderRadius: 10,
     marginTop: 10,
     borderWidth: 1,
     borderColor: '#ddd',
-    backgroundColor: '#000',  // Darker background for better contrast
-    marginBottom: 20,  // Added margin to separate from other sections
+    backgroundColor: '#000',
+    marginBottom: 20,
   },
   searchIcon: {
     height: 30, 
@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 14,
   },
-  otherInformation: {
+  aboutMeInformation: {
     width: '100%',
     marginTop: 10,
     paddingBottom: 10,
@@ -221,6 +221,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   otherContainer: {
+    flexDirection: 'row', 
     width: '100%',
     padding: 20,
     borderRadius: 10,
@@ -228,15 +229,21 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ddd',
     backgroundColor: '#111',
-  },
-  labelHeaderTitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#fff',
-    marginBottom: 5,
+    alignItems: 'center', 
+    flexWrap: 'wrap', 
   },
   labelTextDescription: {
     fontSize: 14,
     color: '#ccc',
+    flex: 1,
+  },
+  schoolIcon: {
+    marginRight: 10,
+  },
+  houseIcon: {
+    marginRight: 10,
+  },
+  birthdayIcon: {
+    marginRight: 10,
   },
 });
