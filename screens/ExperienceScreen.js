@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const ExperienceScreen = () => {
+const ExperienceScreen = ({nagivation}) => {
   return (
     <View>
       <Text>ExperienceScreen</Text>

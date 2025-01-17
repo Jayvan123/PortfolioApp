@@ -1,7 +1,17 @@
 import { StyleSheet, Text, TouchableOpacity, View, TextInput, Image } from 'react-native';
 import React from 'react';
 
-const LoginScreen = ({ navigation }) => {
+const LoginScreen = ({navigation}) => {
+
+  const buttonPress = () => {
+    console.log("You pressed the button");
+  }
+
+  const gotoHomeScreen = () => {
+    console.log("You pressed the DashboardCoffee button");
+    navigation.navigate('FooterNavigation');
+  }
+
   return (
     <View style={styles.whiteBg}>
 
@@ -25,7 +35,7 @@ const LoginScreen = ({ navigation }) => {
           secureTextEntry placeholderTextColor="#a6a6a6"
         />
 
-        <TouchableOpacity style={styles.signinButton}>
+        <TouchableOpacity style={styles.signinButton} onPress ={gotoHomeScreen}>
           <Text style={styles.signupText}>Sign In</Text>
         </TouchableOpacity>
       </View>
@@ -50,7 +60,7 @@ const styles = StyleSheet.create({
   },
   appLogo: {
     alignItems: 'center', 
-    marginTop: 40,
+    marginTop: 50,
   },
   GitFolioLogo: {
     width: 200, 
@@ -82,6 +92,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#1e90ff', 
     textDecorationLine: 'underline', 
+    marginBottom: 8,
   },
   input: {
     borderWidth: 1,
