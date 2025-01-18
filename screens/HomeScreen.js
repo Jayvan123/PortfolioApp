@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons'; // Added the Ionicons imp
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <ScrollView style={styles.background}>
+    <View style={styles.background}>
 
       {/* Search container */}
       <View style={styles.searchContainer}>
@@ -50,13 +50,13 @@ const HomeScreen = ({ navigation }) => {
       </View>
 
       {/* About Me Section */}
-      <View style={styles.aboutMeInformation}>
+      <ScrollView style={styles.aboutMeInformation}>
         <Text style={styles.otherInfoTitle}>About me</Text>
         <View>
           <View style={styles.otherContainer}>
             {/* Using an Ionicons icon for the school */}
             <Icon name="school" size={30} color="#fff" style={styles.schoolIcon}/>
-            <Text style={styles.labelTextDescription}>Studies Bachelor of Science and Information Technologo at USTP-CDO</Text>
+            <Text style={styles.labelTextDescription}>Studies Bachelor of Science in Information Technology at USTP-CDO</Text>
           </View>
 
           <View style={styles.otherContainer}>
@@ -67,14 +67,20 @@ const HomeScreen = ({ navigation }) => {
 
           <View style={styles.otherContainer}>
             {/* Using an Ionicons icon for birthday */}
-            <Icon name="gift" size={30} color="#fff" style={styles.birthdayIcon}/>
+            <Icon name="calendar" size={30} color="#fff" style={styles.calendarIcon}/>
+            <Text style={styles.labelTextDescription}>November 21, 2003</Text>
+          </View>
+
+          <View style={styles.otherContainer}>
+            {/* Using an Ionicons icon for birthday */}
+            <Icon name="calendar" size={30} color="#fff" style={styles.calendarIcon}/>
             <Text style={styles.labelTextDescription}>November 21, 2003</Text>
           </View>
           
         </View>
-      </View>
+      </ScrollView>
 
-    </ScrollView>
+    </View>
   );
 };
 
@@ -243,7 +249,7 @@ const styles = StyleSheet.create({
   houseIcon: {
     marginRight: 10,
   },
-  birthdayIcon: {
+  calendarIcon: {
     marginRight: 10,
   },
 });
