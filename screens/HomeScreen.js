@@ -21,7 +21,7 @@ const HomeScreen = ({ navigation }) => {
           <Text style={styles.labelName}>Jovan O. Labitad</Text>
           <Text style={styles.labelUsername}>Jayvan123</Text>
           <Text style={styles.labelBio}>
-            Lifelong learner. Mobile Developer. Tech explorer.
+            Lifelong learner. Full Stock Developer. Tech explorer.
           </Text>
         </View>
       </View>
@@ -73,8 +73,8 @@ const HomeScreen = ({ navigation }) => {
 
           <View style={styles.otherContainer}>
             {/* Using an Ionicons icon for birthday */}
-            <Icon name="calendar" size={30} color="#fff" style={styles.calendarIcon}/>
-            <Text style={styles.labelTextDescription}>November 21, 2003</Text>
+            <Icon name="heart" size={30} color="#fff" style={styles.calendarIcon}/>
+            <Text style={styles.labelTextDescription}>In relationship</Text>
           </View>
           
         </View>

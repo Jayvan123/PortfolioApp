@@ -14,7 +14,7 @@ const ContactScreen = () => {
         <View style={styles.labels}>
           <Text style={styles.labelName}>Jovan O. Labitad</Text>
           <Text style={styles.labelUsername}>Jayvan123</Text>
-          <Text style={styles.labelBio}>Lifelong learner. Mobile Developer. Tech explorer.</Text>
+          <Text style={styles.labelBio}>Lifelong learner. Full Stock Developer. Tech explorer.</Text>
         </View>
       </View>
 
